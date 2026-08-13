@@ -1,69 +1,173 @@
-# Project Planning & Requirement Analysis
+# Vehicle Rental System – Project Planning & Requirement Analysis
 
-## Sprint 2: Project Planning & Requirement Analysis
+## 1. Project Title
 
-## 1. Selected Project
-Vehicle Rental System (Template ID: T10) — Domain: Transportation & Rental Services — Technology Stack: MERN (MongoDB, Express.js, React.js, Node.js)
+Vehicle Rental System
+
+---
 
 ## 2. Problem Statement
-Many small vehicle rental businesses still manage reservations, vehicle records, and payments manually or through disconnected spreadsheets and paper logs. Rental staff and administrators experience this problem daily, as it leads to booking conflicts, poor vehicle tracking, delayed payments, and inefficient customer management. This needs to be solved because manual processes do not scale, cause revenue loss through double-bookings and missed payments, and give business owners no reliable way to track vehicle availability or rental history.
+
+Many vehicle rental businesses still manage bookings, customer records, and payments manually using paper records or spreadsheets. This often leads to booking conflicts, inaccurate records, delayed payments, and poor customer service.
+
+The people affected are vehicle rental companies, administrators, and customers. A centralized web-based Vehicle Rental System is required to manage vehicles, customers, rentals, returns, and payments efficiently while reducing manual work and improving accuracy.
+
+---
 
 ## 3. Project Objective
-Develop a web-based Vehicle Rental System using the MERN Stack that simplifies rental operations by centralizing the management of vehicles, customers, bookings, returns, and payments — replacing manual, disconnected processes with a single, secure, role-based digital platform.
 
-## 4. Stakeholders
-- **Administrator** – manages users, vehicles, rental operations, payments, reports, and system settings.
-- **Rental Staff** – manages customers, creates bookings, processes returns, updates vehicle availability, and records payments.
-- **Customer** – browses available vehicles, makes rental requests, views rental history, and manages their profile.
+To develop a web-based Vehicle Rental System that enables administrators to manage vehicles, customers, rentals, returns, and payments, while allowing customers to browse available vehicles and book them online through a secure and user-friendly interface.
 
-## 5. Project Scope
+---
+
+## 4. Target Users / Stakeholders
+
+### Administrator
+- Manage vehicles.
+- Manage customer records.
+- Approve rental bookings.
+- Track rentals and returns.
+- Manage payments.
+- Generate reports.
+
+### Customer
+- Register and log in.
+- View available vehicles.
+- Book vehicles.
+- View rental history.
+- Make payments.
+- Update profile.
+
+---
+
+## 5. Core Modules
+
+1. User Authentication
+2. Vehicle Management
+3. Customer Management
+4. Rental Management
+5. Return Management
+6. Payment Management
+7. Dashboard & Reports
+
+---
+
+## 6. Project Scope
 
 ### Included Features
-- User authentication and role-based authorization
-- Vehicle management (add, update, delete, categories, availability)
-- Customer management (register, update, search, profiles)
-- Rental booking management (create, modify, cancel, history, status)
-- Vehicle return management (return processing, inspection, status update)
-- Payment management (billing, payment recording, payment history)
-- Dashboard and revenue/rental reports
+
+- User registration and login.
+- JWT-based authentication.
+- Role-based authorization.
+- Vehicle management.
+- Customer management.
+- Vehicle booking.
+- Rental history.
+- Vehicle return.
+- Payment management.
+- Dashboard with reports.
+- Responsive web interface.
 
 ### Excluded Features
-- GPS vehicle tracking
-- Online payment gateway integration
-- Driving license verification API
-- Vehicle maintenance scheduling
-- Mobile application
-- Insurance management integration
 
-## 6. Functional Requirements
-- User registration and login with JWT authentication
-- Role-based access control (Administrator, Rental Staff, Customer)
-- Add, update, delete, and search vehicles
-- Track and update vehicle availability status
-- Register, update, and search customer records
-- Create, modify, and cancel rental bookings
-- View rental history and rental status
-- Process vehicle returns and update vehicle status after inspection
-- Generate rental bills and record payments
-- View payment history and revenue reports
-- Dashboard displaying rental statistics
+- Mobile application.
+- Online GPS vehicle tracking.
+- AI-based vehicle recommendations.
+- SMS or Email notifications.
+- Online insurance integration.
+- Third-party payment gateway.
+- Live chat support.
 
-## 7. Non-Functional Requirements
-- **Security** – password hashing, JWT authentication, protected routes, input validation
-- **Performance** – fast vehicle search and responsive API communication
-- **Reliability** – accurate vehicle availability tracking with no double-bookings
-- **Usability** – responsive design, simple booking process, easy navigation
-- **Scalability** – architecture that supports future features like GPS tracking and online payments
-- **Maintainability** – modular application architecture with reusable components and organized backend code
+---
 
-## 8. Initial Project Summary
+## 7. Functional Requirements
 
-| Field | Details |
-|---|---|
-| **Project Title** | Vehicle Rental System |
-| **Problem Statement** | Manual, disconnected rental tracking causes booking conflicts, poor vehicle tracking, delayed payments, and inefficient customer management. |
-| **Objective** | A centralized MERN web application to manage vehicles, customers, bookings, returns, and payments. |
-| **Target Users** | Administrator, Rental Staff, Customer |
-| **Core Modules** | User Management, Vehicle Management, Customer Management, Rental Management, Return Management, Payment Management |
-| **Scope** | Included: booking, returns, payments, reports, role-based access. Excluded: GPS tracking, online payment gateway, mobile app, insurance integration. |
-| **Expected Outcome** | A fully functional, deployed web application that lets rental staff manage the complete booking-to-payment lifecycle and gives administrators visibility through dashboards and reports. |
+### Authentication
+
+- The system shall allow users to register.
+- The system shall allow users to log in and log out.
+- The system shall authenticate users using JWT.
+- The system shall provide role-based access.
+- The system shall allow users to update their profiles.
+
+### Vehicle Management
+
+- The administrator shall add vehicles.
+- The administrator shall update vehicle details.
+- The administrator shall delete vehicles.
+- The system shall display available vehicles.
+- Users shall search vehicles by category or name.
+
+### Customer Management
+
+- The administrator shall manage customer records.
+- Customers shall update their profiles.
+
+### Rental Management
+
+- Customers shall book vehicles.
+- The system shall store booking information.
+- The administrator shall approve or reject bookings.
+- Customers shall view rental history.
+
+### Return Management
+
+- The administrator shall record vehicle returns.
+- The system shall update vehicle availability.
+- The system shall calculate rental duration.
+
+### Payment Management
+
+- The system shall generate rental bills.
+- Customers shall make payments.
+- The administrator shall view payment records.
+- The system shall maintain payment history.
+
+### Dashboard & Reports
+
+- The system shall display vehicle availability.
+- The system shall display rental statistics.
+- The system shall display payment summaries.
+- The system shall generate rental reports.
+
+---
+
+## 8. Non-Functional Requirements
+
+### Security
+
+- Passwords must be encrypted before storage.
+- Protected APIs must require JWT authentication.
+- Unauthorized users must not access protected resources.
+- User inputs must be validated.
+
+### Performance
+
+- Pages should load quickly.
+- Database queries should be optimized.
+
+### Usability
+
+- The interface should be responsive.
+- Navigation should be simple and user-friendly.
+
+### Reliability
+
+- The system should handle invalid requests gracefully.
+- Error messages should be meaningful.
+
+### Maintainability
+
+- Backend should use modular architecture.
+- Frontend should use reusable React components.
+- Code should be documented properly.
+
+### Scalability
+
+- The system should support future features such as online payment gateways, GPS tracking, notifications, and mobile applications.
+
+---
+
+## 9. Expected Outcome
+
+The Vehicle Rental System will provide a centralized platform for managing vehicles, customers, rentals, returns, and payments. It will reduce manual work, improve booking accuracy, simplify rental management, and provide students with practical experience in MERN Stack development, MongoDB, REST APIs, JWT authentication, role-based access control, and GitHub collaboration.
