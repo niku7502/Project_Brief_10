@@ -1,9 +1,17 @@
-function Button({ children }) {
+import './Button.css';
+
+function Button({ children, variant = 'primary', type = 'button', onClick, disabled, full }) {
+  const classes = [
+    'btn',
+    `btn--${variant}`,
+    full ? 'btn--full' : '',
+  ].join(' ').trim();
+
   return (
-    <button className="btn">
-      {children || 'Button'}
+    <button type={type} className={classes} onClick={onClick} disabled={disabled}>
+      {children}
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

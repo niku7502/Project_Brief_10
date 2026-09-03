@@ -1,16 +1,14 @@
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
 
 function MainLayout({ children }) {
   return (
-    <div className="main-layout">
+    <div className="app-shell">
       <Navbar />
-      <main className="content">
-        {children || <p>Main Content Placeholder</p>}
-      </main>
+      <main className="app-content">{children}</main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default MainLayout
+export default MainLayout;

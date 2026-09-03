@@ -1,9 +1,11 @@
-function Card() {
+import './Card.css';
+
+function Card({ children, variant = 'default', className = '' }) {
   return (
-    <div className="card">
-      <p>Card Placeholder</p>
+    <div className={`card card--${variant} ${className}`.trim()}>
+      {children}
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
