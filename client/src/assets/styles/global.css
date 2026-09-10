@@ -1,74 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
-@import './variables.css';
-
 * {
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
-}
-
-body {
+html, body {
   margin: 0;
-  background: var(--paper);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 0 0 var(--space-4);
-  letter-spacing: -0.01em;
-}
-
-h1 { font-size: clamp(2rem, 4vw, 3rem); }
-h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
-h3 { font-size: 1.25rem; }
-
-p {
-  margin: 0 0 var(--space-4);
-  max-width: 65ch;
-  color: var(--text-secondary);
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
   color: inherit;
-}
-
-button {
-  font-family: var(--font-body);
-}
-
-.app-shell {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.app-content {
-  flex: 1;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 var(--space-6);
-}
-
-:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
-  }
 }

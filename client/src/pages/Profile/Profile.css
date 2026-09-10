@@ -1,3 +1,4 @@
+/* BEM-style rules using your design system variables */
 .profile {
   padding-top: var(--space-12);
   padding-bottom: var(--space-16);
@@ -26,4 +27,49 @@
 .profile__card .btn {
   align-self: flex-start;
   margin-top: var(--space-2);
+}
+
+/* Utility-style rules (used if this page also has plain profile-page/profile-card markup) */
+.profile-page {
+  max-width: 600px;
+  width: 100%;
+}
+
+.profile-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+/* Responsive adjustments (Sprint 8, Exercise 5) */
+@media (max-width: 1024px) {
+  .profile,
+  .profile-page {
+    max-width: 100%;
+    padding-left: var(--space-4, 16px);
+    padding-right: var(--space-4, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding-top: var(--space-8, 32px);
+    padding-bottom: var(--space-10, 40px);
+  }
+
+  .profile__row {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .profile__card .btn {
+    align-self: stretch;
+    width: 100%;
+  }
 }

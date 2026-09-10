@@ -1,11 +1,18 @@
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import "./MainLayout.css";
 
-function MainLayout({ children }) {
+function MainLayout() {
   return (
-    <div className="app-shell">
+    <div className="main-layout">
       <Navbar />
-      <main className="app-content">{children}</main>
+      <main className="main-content">
+        <div className="page-container">
+          <Outlet />
+        </div>
+      </main>
       <Footer />
     </div>
   );

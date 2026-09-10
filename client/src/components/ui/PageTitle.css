@@ -1,0 +1,30 @@
+.page-title {
+  margin-bottom: 4px;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.page-title h1::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 4px;
+  background: #f59e0b;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.page-subtitle {
+  color: #64748b;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
