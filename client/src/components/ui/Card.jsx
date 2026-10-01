@@ -1,5 +1,4 @@
-import React from "react";
-import "./Card.css";
+import './ui.css';
 
 function Card({ title, description, children }) {
   return (

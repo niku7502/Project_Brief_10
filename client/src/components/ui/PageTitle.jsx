@@ -1,11 +1,10 @@
-import React from "react";
-import "./PageTitle.css";
+import './ui.css';
 
 function PageTitle({ title, subtitle }) {
   return (
     <div className="page-title">
       <h1>{title}</h1>
-      {subtitle && <p className="page-subtitle">{subtitle}</p>}
+      {subtitle && <p>{subtitle}</p>}
     </div>
   );
 }

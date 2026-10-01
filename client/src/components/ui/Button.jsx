@@ -1,7 +1,6 @@
-import React from "react";
-import "./Button.css";
+import './ui.css';
 
-function Button({ text, onClick, type = "button", variant = "primary" }) {
+function Button({ text, onClick, type = 'button', variant = 'primary' }) {
   return (
     <button type={type} className={`btn btn-${variant}`} onClick={onClick}>
       {text}
