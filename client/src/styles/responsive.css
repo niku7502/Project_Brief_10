@@ -1,0 +1,54 @@
+/* Desktop: 1025px and up. This is the default styling, no query needed. */
+
+/* Tablet: up to 1024px */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+
+  .main-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile: up to 640px */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .page-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row .btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+}

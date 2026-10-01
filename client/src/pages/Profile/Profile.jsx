@@ -1,13 +1,18 @@
-import PageTitle from "../../components/ui/PageTitle";
-import "./Profile.css";
+import PageTitle from '../../components/ui/PageTitle';
+import Card from '../../components/ui/Card';
+import CardGrid from '../../components/ui/CardGrid';
+import Button from '../../components/ui/Button';
 
 function Profile() {
   return (
-    <div className="profile-page">
-      <PageTitle title="My Profile" subtitle="Manage your account details" />
-      <div className="profile-card">
-        {/* existing profile fields */}
-      </div>
+    <div>
+      <PageTitle title="Profile" subtitle="Manage your account details" />
+      <CardGrid>
+        <Card title="User Information" description="Your profile details will appear here.">
+          <Button text="Edit Profile" />
+        </Card>
+        <Card title="Account Settings" description="Preferences and security options." />
+      </CardGrid>
     </div>
   );
 }
