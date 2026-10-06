@@ -11,8 +11,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Vehicle Rental System</div>
-
+      <div className="navbar-logo">RentEase</div>
       <ul className="navbar-links">
         {links.map((link) => (
           <li key={link.to}>

@@ -11,7 +11,7 @@ function Profile() {
         <Card title="User Information" description="Your profile details will appear here.">
           <Button text="Edit Profile" />
         </Card>
-        <Card title="Account Settings" description="Preferences and security options." />
+        <Card title="Booking History" description="Your past rentals will appear here." />
       </CardGrid>
     </div>
   );

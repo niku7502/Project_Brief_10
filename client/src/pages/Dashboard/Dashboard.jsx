@@ -6,15 +6,15 @@ import Button from '../../components/ui/Button';
 function Dashboard() {
   return (
     <div>
-      <PageTitle title="Dashboard" subtitle="Overview of your activity" />
+      <PageTitle title="Dashboard" subtitle="Overview of your rental activity" />
       <CardGrid>
-        <Card title="Statistics" description="Summary information will appear here." />
-        <Card title="Recent Activity" description="No recent activity yet." />
-        <Card title="Messages" description="You have no new messages." />
+        <Card title="Active Rentals" description="Vehicles currently on the road." />
+        <Card title="Available Vehicles" description="Ready to be booked right now." />
+        <Card title="Pending Payments" description="Bookings waiting for payment." />
         <Card title="Quick Actions" description="Common tasks in one place.">
           <div className="button-row">
-            <Button text="Refresh" onClick={() => console.log('Refreshed')} />
-            <Button text="Settings" variant="secondary" />
+            <Button text="New booking" />
+            <Button text="Refresh" variant="secondary" />
           </div>
         </Card>
       </CardGrid>

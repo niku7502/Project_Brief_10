@@ -1,20 +1,16 @@
 import PageTitle from '../../components/ui/PageTitle';
 import Card from '../../components/ui/Card';
-import CardGrid from '../../components/ui/CardGrid';
 import Button from '../../components/ui/Button';
 
-function Profile() {
+function Login() {
   return (
-    <div>
-      <PageTitle title="Profile" subtitle="Manage your account details" />
-      <CardGrid>
-        <Card title="User Information" description="Your profile details will appear here.">
-          <Button text="Edit Profile" />
-        </Card>
-        <Card title="Account Settings" description="Preferences and security options." />
-      </CardGrid>
+    <div style={{ maxWidth: '420px', margin: '0 auto' }}>
+      <PageTitle title="Login" />
+      <Card title="Sign In" description="The login form will be added in a later sprint.">
+        <Button text="Login" type="submit" />
+      </Card>
     </div>
   );
 }
 
-export default Profile;
+export default Login;
