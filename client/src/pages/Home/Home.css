@@ -1,3 +1,4 @@
+/* ---------- Hero ---------- */
 .hero {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -23,6 +24,7 @@
   font-weight: 600;
 }
 
+/* ---------- Featured vehicle ---------- */
 .hero-featured {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -32,6 +34,7 @@
 }
 .hero-featured h2 { color: #fff; margin: 0.75rem 0 0.25rem; }
 .hero-featured p { margin: 0; color: #c7d2fe; }
+.hero-featured .btn { margin-top: 1rem; }
 
 .badge-orange {
   display: inline-block;
@@ -43,6 +46,17 @@
   font-weight: 700;
 }
 
+.badge-red {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(248, 113, 113, 0.2);
+  color: #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ---------- Stats ---------- */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -62,6 +76,7 @@
 .stat strong { font-size: 1.6rem; color: #111827; }
 .stat span { font-size: 0.8rem; color: #6b7280; text-align: center; }
 
+/* ---------- Categories ---------- */
 .section-heading { text-align: center; margin-bottom: 0.25rem; }
 .section-sub { text-align: center; color: #6b7280; margin-bottom: 1.5rem; }
 
@@ -80,6 +95,16 @@
   font-weight: 700;
 }
 
+.category-action { margin-top: 0.75rem; }
+
+.selection-message {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* ---------- Call to action banner ---------- */
 .cta-banner {
   display: flex;
   justify-content: space-between;
