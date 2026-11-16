@@ -1,69 +1,65 @@
-// Temporary test data. A real database replaces this in a later sprint.
-const vehicles = [
-  { id: 1, name: 'Honda City', type: 'Car', pricePerDay: 1500 },
-  { id: 2, name: 'Royal Enfield Classic', type: 'Bike', pricePerDay: 800 },
-  { id: 3, name: 'Toyota Fortuner', type: 'SUV', pricePerDay: 3500 },
-];
+const Vehicle = require('../models/Vehicle');
 
 // GET /api/vehicles
-const getVehicles = (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'All vehicles fetched',
-    count: vehicles.length,
-    data: vehicles,
-  });
+const getVehicles = async (req, res) => {
+  try {
+    const vehicles = await Vehicle.find();
+    res.status(200).json(vehicles);
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
 };
 
-// GET /api/vehicles/:id  (route parameter)
-const getVehicleById = (req, res) => {
-  const { id } = req.params;
-  const vehicle = vehicles.find((v) => v.id === Number(id));
-
-  if (!vehicle) {
-    return res.status(404).json({
-      success: false,
-      message: `Vehicle with id ${id} not found`,
-    });
+// GET /api/vehicles/:id
+const getVehicleById = async (req, res) => {
+  try {
+    const vehicle = await Vehicle.findById(req.params.id);
+    if (!vehicle) {
+      return res.status(404).json({ success: false, message: 'Vehicle not found' });
+    }
+    res.status(200).json(vehicle);
+  } catch (error) {
+    res.status(400).json({ success: false, message: 'Invalid vehicle id' });
   }
-
-  res.status(200).json({
-    success: true,
-    message: `Vehicle ${id} fetched`,
-    data: vehicle,
-  });
 };
 
 // POST /api/vehicles
-const createVehicle = (req, res) => {
-  res.status(201).json({
-    success: true,
-    message: 'Vehicle created (test response, not saved yet)',
-    data: req.body,
-  });
+const createVehicle = async (req, res) => {
+  try {
+    const vehicle = await Vehicle.create(req.body);
+    res.status(201).json(vehicle);
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
+  }
 };
 
 // PUT /api/vehicles/:id
-const updateVehicle = (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: `Vehicle ${req.params.id} updated (test response, not saved yet)`,
-    data: req.body,
-  });
+const updateVehicle = async (req, res) => {
+  try {
+    const vehicle = await Vehicle.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!vehicle) {
+      return res.status(404).json({ success: false, message: 'Vehicle not found' });
+    }
+    res.status(200).json(vehicle);
+  } catch (error) {
+    res.status(400).json({ success: false, message: error.message });
+  }
 };
 
 // DELETE /api/vehicles/:id
-const deleteVehicle = (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: `Vehicle ${req.params.id} deleted (test response, not saved yet)`,
-  });
+const deleteVehicle = async (req, res) => {
+  try {
+    const vehicle = await Vehicle.findByIdAndDelete(req.params.id);
+    if (!vehicle) {
+      return res.status(404).json({ success: false, message: 'Vehicle not found' });
+    }
+    res.status(200).json({ success: true, message: 'Vehicle deleted' });
+  } catch (error) {
+    res.status(400).json({ success: false, message: 'Invalid vehicle id' });
+  }
 };
 
-module.exports = {
-  getVehicles,
-  getVehicleById,
-  createVehicle,
-  updateVehicle,
-  deleteVehicle,
-};
+module.exports = { getVehicles, getVehicleById, createVehicle, updateVehicle, deleteVehicle };
