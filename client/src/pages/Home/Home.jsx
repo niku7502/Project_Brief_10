@@ -53,7 +53,8 @@ function Home() {
             payment from one dashboard, built for small rental fleets.
           </p>
           <div className="button-row hero-buttons">
-            <Button text="Book a vehicle" onClick={() => navigate('/dashboard')} />
+            {/* Sprint 10: opens the booking form */}
+            <Button text="Book a vehicle" onClick={() => navigate('/book')} />
             <Button text="View dashboard" variant="secondary" onClick={() => navigate('/dashboard')} />
           </div>
           <ul className="trust-list">
@@ -114,7 +115,7 @@ function Home() {
         {/* Conditional rendering: message depends on selectedCategory */}
         <p className="selection-message">
           {selectedCategory
-            ? `You selected ${selectedCategory}. Head to the dashboard to book.`
+            ? `You selected ${selectedCategory}. Use the Book button to reserve one.`
             : 'Select a category to see your options.'}
         </p>
       </section>
@@ -124,7 +125,8 @@ function Home() {
           <h2>Ready to hit the road?</h2>
           <p>Book in under two minutes, with no paperwork and no waiting.</p>
         </div>
-        <Button text="Book a vehicle" onClick={() => navigate('/dashboard')} />
+        {/* Sprint 10: opens the booking form */}
+        <Button text="Book a vehicle" onClick={() => navigate('/book')} />
       </section>
     </div>
   );

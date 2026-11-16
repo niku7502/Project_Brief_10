@@ -5,6 +5,7 @@ function Navbar() {
   const links = [
     { to: '/', label: 'Home' },
     { to: '/dashboard', label: 'Dashboard' },
+    { to: '/book', label: 'Book' },
     { to: '/profile', label: 'Profile' },
     { to: '/login', label: 'Login' },
   ];

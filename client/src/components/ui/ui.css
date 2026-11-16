@@ -53,8 +53,39 @@
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #111827;
 }
 .input-field:focus { outline: 2px solid #4f46e5; border-color: transparent; }
+textarea.input-field { resize: vertical; }
+
+/* ---------- Form fields (Sprint 10) ---------- */
+.form-field { margin-bottom: 1rem; }
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.required { color: #dc2626; }
+
+.input-error { border-color: #dc2626; }
+.input-error:focus { outline: 2px solid #dc2626; }
+
+.error-message {
+  margin-top: 0.3rem;
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.helper-text {
+  margin: -0.5rem 0 1rem;
+  color: #6b7280;
+  font-size: 0.8rem;
+}
 
 /* ---------- Status text ---------- */
 .status-in { color: #166534; font-weight: 600; }
